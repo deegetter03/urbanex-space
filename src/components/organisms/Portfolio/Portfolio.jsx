@@ -6,7 +6,7 @@ import FarmhouseCover from "../../../assets/categories/FarmhouseCover.webp"
 import { Link, useLocation } from "react-router-dom"
 import { useEffect } from "react"
 
-
+//comment
 export const Portfolio = () => {
 
     const location = useLocation();
