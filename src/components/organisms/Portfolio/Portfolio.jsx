@@ -2,7 +2,7 @@ import { Parallax } from "../../atoms/Parallax/Parallax"
 import Office from "../../../assets/categories/OfficeCover.webp"
 import Residential from "../../../assets/categories/ResidentialCover.webp"
 import Hospitality from "../../../assets/categories/HospitalityCover.webp"
-import FarmhouseCover from "../../../assets/categories/FarmhouseCover.webp"
+import FarmhouseCover from "../../../assets/categories/FArmhouseCover.webp"
 import { Link, useLocation } from "react-router-dom"
 import { useEffect } from "react"
 
