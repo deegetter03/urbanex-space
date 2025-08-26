@@ -43,7 +43,7 @@ export const Contact = () => {
     if (res.ok) {
       setStatus("✅ Thank you! Your message has been sent.");
       form.reset();
-      
+
       // ⏳ Clear message after 3 seconds
       setTimeout(() => {
         setStatus("");
@@ -51,6 +51,7 @@ export const Contact = () => {
     } 
     else {
       setStatus("❌ Oops! Something went wrong, please try again.");
+      form.reset();
       setTimeout(() => {
         setStatus("");
       }, 3000);
