@@ -1,42 +1,23 @@
-import React, { useState } from 'react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-
-// Define map container styles
-const containerStyle = {
-  width: '100%',
-  height: '400px'
-};
-
-const center = {
-  lat: 28.47093,  // Latitude of the location
-  lng: 77.13863  // Longitude of the location
-};
-
 const Map = () => {
-  const [map, setMap] = useState(null);
-
-  // This is triggered after the map is loaded
-  const onLoad = mapInstance => {
-    setMap(mapInstance);
-  };
-
-  // This is triggered when the map is unloaded
-  const onUnmount = () => {
-    setMap(null);
+  // Old CSS reused here
+  const containerStyle = {
+    width: "100%",
+    height: "400px",
   };
 
   return (
-    <LoadScript googleMapsApiKey={import.meta.env.VITE_MAPS_API_KEY}>
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={10}
-        onLoad={onLoad}
-        onUnmount={onUnmount}
-      >
-        <Marker position={center} />
-      </GoogleMap>
-    </LoadScript>
+    <div style={containerStyle}>
+      <iframe
+        title="Urbanex Space Location"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.293292675441!2d77.1360999749508!3d28.470712691411677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1f801dd26ecb%3A0x7cf8166c61fc7b32!2sUrbanex%20Space!5e0!3m2!1sen!2sin!4v1756189957812!5m2!1sen!2sin"
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
   );
 };
 
